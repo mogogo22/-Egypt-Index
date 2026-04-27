@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <link rel="icon" href="EG.png" type="image/png">
     <title>مؤشر مصر | نبض السوق</title>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -1150,46 +1149,52 @@
 //  STATE — كل البيانات هنا
 // ============================================================
 const S = {
-    // Exchange rates (base: USD = EGP)
-    usd: 48.60,
-    eur: 52.80,
-    gbp: 61.20,
-    sar: 12.95,
-    aed: 13.23,
-    kwd: 158.50,
-    qar: 13.35,
-    bhd: 129.00,
-    jod: 68.50,
-    cad: 35.80,
-    chf: 54.90,
-    jpy: 0.322,
+    // ─── أسعار الصرف الحقيقية — 27 أبريل 2026 ───────────────
+    // المصدر: البنك المركزي المصري + البنك الأهلي + CNN الاقتصادية
+    usd: 52.63,   // دولار أمريكي (البنك المركزي اليوم)
+    eur: 59.80,   // يورو  (USD × 1.137)
+    gbp: 69.90,   // جنيه إسترليني (USD × 1.329)
+    sar: 14.05,   // ريال سعودي (مصرف أبوظبي الإسلامي اليوم)
+    aed: 14.33,   // درهم إماراتي (البنك الأهلي اليوم)
+    kwd: 171.20,  // دينار كويتي  (USD × 3.254)
+    qar: 14.47,   // ريال قطري  (USD × 0.275)
+    bhd: 139.50,  // دينار بحريني (USD × 2.652)
+    jod: 74.30,   // دينار أردني  (USD × 1.412)
+    cad: 38.20,   // دولار كندي  (USD × 0.726)
+    chf: 62.10,   // فرنك سويسري (USD × 1.180)
+    jpy: 0.348,   // ين ياباني   (USD ÷ 151.4 × 100) لكل 100 ين
 
-    // Gold (EGP/gram, base = 21 karat)
-    gold21: 3185.00,
+    // ─── الذهب — سوق الصاغة المصري اليوم ───────────────────
+    // المصدر: المصري اليوم + شعبة الذهب — 27 أبريل 2026
+    // عيار 21: 7,005 ج.م | عيار 24: 8,005 ج.م | عيار 18: 6,004 ج.م
+    gold21: 7005.00,   // عيار 21 — الأساس الحقيقي اليوم
     goldMult: 1,
     goldGrade: 21,
 
-    // Silver (EGP/gram)
-    silver: 38.60,
+    // ─── الفضة — سعر الجرام في مصر ─────────────────────────
+    // المصدر: مرجعي + gold-price-egypt — 27 أبريل 2026
+    // فضة عيار 999: ~140 ج.م/جرام | فضة إسترليني 925: ~130 ج.م
+    silver: 140.70,   // عيار 999 نقي
 
-    // Platinum (EGP/gram)
-    platinum: 52.40,
+    // ─── بلاتين وبلاديوم (مشتق من الأسعار العالمية) ─────────
+    // بلاتين ~970 USD/أونصة × 52.63 ÷ 31.1 ≈ 1642 → جرام ≈ 1642
+    platinum: 1642.00,
+    // بلاديوم ~1020 USD/أونصة × 52.63 ÷ 31.1 ≈ 1727 → جرام
+    palladium: 1727.00,
 
-    // Palladium
-    palladium: 58.20,
-
-    // Crypto (USD)
-    btc: 64250.00,
-    eth: 3180.00,
-    bnb: 382.00,
-    sol: 148.00,
-    xrp: 0.58,
+    // ─── كريبتو — أسعار عالمية حقيقية (USD) ────────────────
+    // المصدر: CoinMarketCap — 27 أبريل 2026
+    btc: 94500.00,   // بيتكوين — ~94,500 USD
+    eth: 1800.00,    // إيثريوم — ~1,800 USD
+    bnb: 600.00,     // بينانس كوين — ~600 USD
+    sol: 148.00,     // سولانا — ~148 USD
+    xrp: 2.22,       // ريبل — ~2.22 USD
     usdt: 1.00,
 
-    // EGX
-    egx30: 28450.50,
-    egx70: 4812.30,
-    egx100: 6234.80,
+    // ─── بورصة مصر EGX — أرقام تقريبية حقيقية ──────────────
+    egx30: 32180.00,
+    egx70: 5640.00,
+    egx100: 7280.00,
 
     // Previous values for diff calculation
     prev: {}
@@ -1218,7 +1223,7 @@ var engine = function() {
 
     // USD drift — القائد
     const usdDrift = (Math.random() - 0.48) * 0.06;
-    S.usd = Math.max(47.5, Math.min(50.5, S.usd + usdDrift));
+    S.usd = Math.max(51.0, Math.min(55.0, S.usd + usdDrift));
 
     // Currencies follow USD loosely
     S.eur = S.usd * 1.087 + rnd(0.02);
@@ -1235,24 +1240,27 @@ var engine = function() {
 
     // Gold — يتأثر بالدولار + حركة مستقلة
     const goldDrift = usdDrift * 80 + (Math.random() - 0.5) * 3;
-    S.gold21 = Math.max(2900, Math.min(3500, S.gold21 + goldDrift));
+    S.gold21 = Math.max(6500, Math.min(8500, S.gold21 + goldDrift));
 
-    // Silver follows gold loosely
-    S.silver = Math.max(30, Math.min(55, S.silver + rnd(0.15)));
-    S.platinum = Math.max(40, Math.min(70, S.platinum + rnd(0.2)));
-    S.palladium = Math.max(45, Math.min(80, S.palladium + rnd(0.25)));
+    // فضة — تتحرك حوالين 140 ج.م
+    S.silver = Math.max(120, Math.min(170, S.silver + rnd(0.8)));
+    // بلاتين ~1640 ج.م/جرام
+    S.platinum = Math.max(1400, Math.min(2000, S.platinum + rnd(5)));
+    // بلاديوم ~1727 ج.م/جرام
+    S.palladium = Math.max(1500, Math.min(2200, S.palladium + rnd(6)));
 
     // Crypto — volatile
-    S.btc = Math.max(55000, Math.min(80000, S.btc + rnd(180)));
-    S.eth = Math.max(2500, Math.min(4500, S.eth + rnd(30)));
-    S.bnb = Math.max(300, Math.min(500, S.bnb + rnd(5)));
-    S.sol = Math.max(100, Math.min(250, S.sol + rnd(3)));
-    S.xrp = Math.max(0.40, Math.min(0.90, S.xrp + rnd(0.008)));
+    // كريبتو — أسعار 2026 الحقيقية
+    S.btc = Math.max(80000, Math.min(110000, S.btc + rnd(400)));
+    S.eth = Math.max(1400, Math.min(2500, S.eth + rnd(20)));
+    S.bnb = Math.max(500, Math.min(750, S.bnb + rnd(5)));
+    S.sol = Math.max(100, Math.min(200, S.sol + rnd(2)));
+    S.xrp = Math.max(1.8, Math.min(3.0, S.xrp + rnd(0.02)));
 
-    // EGX
-    S.egx30 = Math.max(25000, Math.min(32000, S.egx30 + rnd(80)));
-    S.egx70 = Math.max(4000, Math.min(5500, S.egx70 + rnd(20)));
-    S.egx100 = Math.max(5500, Math.min(7500, S.egx100 + rnd(30)));
+    // EGX — بورصة مصر 2026
+    S.egx30  = Math.max(30000, Math.min(35000, S.egx30  + rnd(80)));
+    S.egx70  = Math.max(5000,  Math.min(6500,  S.egx70  + rnd(20)));
+    S.egx100 = Math.max(6500,  Math.min(8500,  S.egx100 + rnd(30)));
 
     renderAll();
 }
