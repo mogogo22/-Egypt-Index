@@ -37,8 +37,6 @@
             overflow-x: hidden;
             transition: background 0.3s, color 0.3s;
         }
-
-        /* ===== SIDEBAR ===== */
         .sidebar {
             position: fixed;
             top: 0; right: 0;
@@ -68,7 +66,6 @@
         }
         .logo-text { font-size: 20px; font-weight: 900; letter-spacing: -0.5px; }
         .logo-text span { color: var(--blue); }
-
         .nav-btn {
             display: flex;
             align-items: center;
@@ -94,7 +91,6 @@
             box-shadow: 0 8px 20px rgba(59,130,246,0.3);
         }
         .nav-btn svg { width: 18px; height: 18px; flex-shrink: 0; }
-
         .sidebar-footer {
             margin-top: auto;
             padding: 12px;
@@ -116,8 +112,6 @@
             0%, 100% { opacity: 1; transform: scale(1); }
             50% { opacity: 0.5; transform: scale(0.8); }
         }
-
-        /* ===== PROGRESS BAR ===== */
         #sync-bar {
             position: fixed;
             top: 0; left: 0;
@@ -126,8 +120,6 @@
             z-index: 999;
             transition: width 0.1s linear;
         }
-
-        /* ===== BOTTOM NAV (MOBILE) ===== */
         .bottom-nav {
             display: none;
             position: fixed;
@@ -147,14 +139,11 @@
             flex: 1;
         }
         .bottom-nav .nav-btn svg { width: 20px; height: 20px; }
-
-        /* ===== MAIN ===== */
         main {
             margin-right: var(--sidebar-w);
             padding: 32px 28px;
             min-height: 100vh;
         }
-
         .page { display: none; }
         .page.active {
             display: block;
@@ -164,15 +153,12 @@
             from { opacity: 0; transform: translateY(12px); }
             to { opacity: 1; transform: translateY(0); }
         }
-
         .page-header { margin-bottom: 28px; }
         .page-title { font-size: 28px; font-weight: 900; letter-spacing: -0.5px; }
         .page-sub {
             font-size: 12px; color: var(--muted); font-weight: 600;
             margin-top: 4px; display: flex; align-items: center; gap: 6px;
         }
-
-        /* ===== CARDS ===== */
         .card {
             background: var(--card);
             border: 1px solid var(--border);
@@ -180,9 +166,6 @@
             padding: 24px;
             transition: background 0.3s, border 0.3s;
         }
-        .card-sm { padding: 20px; }
-
-        /* ===== HERO GOLD ===== */
         .hero-gold {
             background: linear-gradient(135deg, #1a1200 0%, #0e1420 100%);
             border: 1px solid #2a1f00;
@@ -234,8 +217,6 @@
             transition: all 0.2s;
         }
         .grade-btn.active { background: var(--blue); color: white; border-color: var(--blue); }
-
-        /* ===== MINI CARDS ===== */
         .mini-card {
             background: var(--card);
             border: 1px solid var(--border);
@@ -261,13 +242,9 @@
             display: inline-block;
             font-family: 'IBM Plex Mono', monospace;
         }
-        .up .mini-price, .up { color: var(--green) !important; }
-        .down .mini-price, .down { color: var(--red) !important; }
         .change-up { background: rgba(34,197,94,0.1); color: var(--green); }
         .change-down { background: rgba(239,68,68,0.1); color: var(--red); }
         .change-flat { background: rgba(90,106,130,0.1); color: var(--muted); }
-
-        /* ===== GRID LAYOUTS ===== */
         .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
         .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
         .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
@@ -277,8 +254,6 @@
             gap: 16px;
             margin-bottom: 16px;
         }
-
-        /* ===== FUEL SECTION ===== */
         .fuel-card {
             background: var(--card);
             border: 1px solid var(--border);
@@ -296,8 +271,6 @@
         .fuel-name { font-size: 13px; font-weight: 700; color: var(--muted); margin-bottom: 2px; }
         .fuel-price { font-size: 26px; font-weight: 900; font-family: 'IBM Plex Mono', monospace; }
         .fuel-unit { font-size: 10px; color: var(--muted); font-weight: 700; margin-top: 2px; }
-
-        /* ===== TABLE ===== */
         .data-table {
             width: 100%;
             border-collapse: collapse;
@@ -312,8 +285,6 @@
             border-bottom: 1px solid var(--border);
             background: var(--card2);
         }
-        .data-table th:first-child { border-radius: 12px 0 0 0; }
-        .data-table th:last-child { border-radius: 0 12px 12px 0; }
         .data-table td {
             padding: 14px 16px;
             border-bottom: 1px solid var(--border);
@@ -322,8 +293,6 @@
         .data-table tr:last-child td { border-bottom: none; }
         .data-table tr:hover td { background: var(--card2); }
         .mono { font-family: 'IBM Plex Mono', monospace; }
-
-        /* ===== SETTINGS ===== */
         .setting-row {
             display: flex; align-items: center;
             justify-content: space-between;
@@ -371,8 +340,6 @@
             transition: all 0.2s;
         }
         .theme-btn:hover { background: var(--blue); color: white; border-color: var(--blue); }
-
-        /* ===== SECTION TITLE ===== */
         .section-label {
             font-size: 11px; font-weight: 900;
             text-transform: uppercase;
@@ -381,8 +348,6 @@
             margin-bottom: 12px;
             margin-top: 24px;
         }
-
-        /* ===== TICKER BAR ===== */
         .ticker-wrap {
             background: var(--card);
             border: 1px solid var(--border);
@@ -394,7 +359,7 @@
         .ticker-inner {
             display: flex;
             gap: 32px;
-            animation: ticker 20s linear infinite;
+            animation: ticker 30s linear infinite;
             white-space: nowrap;
             padding: 0 20px;
         }
@@ -409,8 +374,6 @@
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
         }
-
-        /* ===== ALERTS ===== */
         .alert-label {
             display: block;
             font-size: 11px; font-weight: 700; color: var(--muted);
@@ -446,8 +409,6 @@
             box-shadow: 0 8px 20px rgba(59,130,246,0.3);
         }
         .alert-add-btn:hover { background: #2563eb; transform: translateY(-1px); }
-        .alert-add-btn:active { transform: translateY(0); }
-
         .alert-card {
             background: var(--card);
             border: 1px solid var(--border);
@@ -457,7 +418,6 @@
             align-items: center;
             gap: 14px;
             margin-bottom: 10px;
-            transition: all 0.3s;
             animation: slideInAlert 0.3s ease;
         }
         @keyframes slideInAlert {
@@ -499,7 +459,6 @@
             flex-shrink: 0;
         }
         .alert-delete-btn:hover { background: var(--red); color: white; }
-
         .log-card {
             background: var(--card);
             border: 1px solid var(--green);
@@ -509,11 +468,8 @@
             align-items: center;
             gap: 12px;
             margin-bottom: 8px;
-            opacity: 0.85;
         }
         .log-time { font-size: 10px; color: var(--muted); font-weight: 700; font-family: 'IBM Plex Mono', monospace; }
-
-        /* ===== TOAST ===== */
         .toast {
             background: var(--card);
             border: 1px solid var(--green);
@@ -558,8 +514,6 @@
             color: var(--muted); font-size: 16px;
             cursor: pointer; padding: 4px;
         }
-
-        .bottom-nav .nav-btn { position: relative; }
         .drawer-item {
             display: flex;
             flex-direction: column;
@@ -577,43 +531,7 @@
             transition: all 0.2s;
             width: 100%;
         }
-        .drawer-item:hover, .drawer-item:active {
-            background: var(--blue);
-            color: white;
-            border-color: var(--blue);
-        }
-        @keyframes shake {
-            0%,100%{transform:translateX(0)} 20%{transform:translateX(-6px)} 40%{transform:translateX(6px)} 60%{transform:translateX(-4px)} 80%{transform:translateX(4px)}
-        }
-        @media (max-width: 768px) {
-            .sidebar { display: none; }
-            .bottom-nav { display: flex; }
-            main {
-                margin-right: 0;
-                padding: 20px 16px;
-                padding-bottom: 100px;
-            }
-            .hero-grid { grid-template-columns: 1fr; }
-            .grid-2 { grid-template-columns: 1fr 1fr; }
-            .grid-3 { grid-template-columns: 1fr 1fr; }
-            .grid-4 { grid-template-columns: 1fr 1fr; }
-            .gold-price { font-size: 38px; }
-            .page-title { font-size: 22px; }
-            .data-table { font-size: 12px; }
-            .data-table th, .data-table td { padding: 10px 12px; }
-        }
-        @media (max-width: 400px) {
-            .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr 1fr; }
-            main { padding: 16px 12px; padding-bottom: 100px; }
-        }
-
-        /* Flash animation */
-        @keyframes flash-green { 0%,100%{background:transparent} 50%{background:rgba(34,197,94,0.08)} }
-        @keyframes flash-red { 0%,100%{background:transparent} 50%{background:rgba(239,68,68,0.08)} }
-        .flash-up { animation: flash-green 0.6s; }
-        .flash-down { animation: flash-red 0.6s; }
-
-        /* EGX Badge */
+        .drawer-item:hover { background: var(--blue); color: white; border-color: var(--blue); }
         .egx-card {
             background: linear-gradient(135deg, #0a1628, #0e1420);
             border: 1px solid #1e3a5f;
@@ -626,17 +544,47 @@
         }
         .egx-label { font-size: 11px; font-weight: 900; color: var(--blue); margin-bottom: 8px; }
         .egx-value { font-size: 28px; font-weight: 900; font-family: 'IBM Plex Mono', monospace; }
-
-        /* Crypto badge */
-        .crypto-card {
-            background: linear-gradient(135deg, #150a00, #0e1420);
-            border: 1px solid #2a1800;
-            border-radius: 18px;
-            padding: 20px;
+        .api-status {
+            background: rgba(59,130,246,0.08);
+            border: 1px solid rgba(59,130,246,0.2);
+            border-radius: 12px;
+            padding: 10px 16px;
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--blue);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
-        .light .crypto-card {
-            background: linear-gradient(135deg, #fff7ed, #ffedd5);
-            border-color: #fed7aa;
+        .api-status.error {
+            background: rgba(239,68,68,0.08);
+            border-color: rgba(239,68,68,0.2);
+            color: var(--red);
+        }
+        .api-status.ok {
+            background: rgba(34,197,94,0.08);
+            border-color: rgba(34,197,94,0.2);
+            color: var(--green);
+        }
+        @keyframes flash-green { 0%,100%{background:transparent} 50%{background:rgba(34,197,94,0.08)} }
+        @keyframes flash-red { 0%,100%{background:transparent} 50%{background:rgba(239,68,68,0.08)} }
+        .flash-up { animation: flash-green 0.6s; }
+        .flash-down { animation: flash-red 0.6s; }
+        @keyframes shake {
+            0%,100%{transform:translateX(0)} 20%{transform:translateX(-6px)} 40%{transform:translateX(6px)} 60%{transform:translateX(-4px)} 80%{transform:translateX(4px)}
+        }
+        @media (max-width: 768px) {
+            .sidebar { display: none; }
+            .bottom-nav { display: flex; }
+            main { margin-right: 0; padding: 20px 16px; padding-bottom: 100px; }
+            .hero-grid { grid-template-columns: 1fr; }
+            .grid-3 { grid-template-columns: 1fr 1fr; }
+            .grid-4 { grid-template-columns: 1fr 1fr; }
+            .gold-price { font-size: 38px; }
+            .page-title { font-size: 22px; }
+            .data-table { font-size: 12px; }
+            .data-table th, .data-table td { padding: 10px 12px; }
         }
     </style>
 </head>
@@ -644,13 +592,11 @@
 
 <div id="sync-bar" style="width:0%"></div>
 
-<!-- SIDEBAR (Desktop) -->
 <aside class="sidebar">
     <div class="logo">
         <div class="logo-icon">📈</div>
         <div class="logo-text">مؤشر <span>مصر</span></div>
     </div>
-
     <nav>
         <button class="nav-btn active" data-page="home" onclick="goTo('home', this)">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
@@ -682,17 +628,15 @@
             الإعدادات
         </button>
     </nav>
-
-    <div class="sidebar-footer" style="margin-top:auto">
+    <div class="sidebar-footer">
         <div class="live-dot">
             <div class="dot-pulse"></div>
-            بيانات مباشرة
+            بيانات حقيقية مباشرة
         </div>
-        <div style="font-size:10px;color:var(--muted);margin-top:4px" id="last-update-sidebar">جاري التحديث...</div>
+        <div style="font-size:10px;color:var(--muted);margin-top:4px" id="last-update-sidebar">جاري الجلب...</div>
     </div>
 </aside>
 
-<!-- BOTTOM NAV (Mobile) -->
 <nav class="bottom-nav">
     <button class="nav-btn active" data-page="home" onclick="goTo('home', this)">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
@@ -717,51 +661,31 @@
     </button>
 </nav>
 
-<!-- MORE DRAWER (mobile only) -->
 <div id="more-overlay" onclick="closeMoreDrawer()" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:299;backdrop-filter:blur(2px)"></div>
-<div id="more-drawer" style="
-    display:none;
-    position:fixed;bottom:0;left:0;right:0;
-    background:var(--card);
-    border-radius:24px 24px 0 0;
-    border-top:1px solid var(--border);
-    padding:12px 20px 40px;
-    z-index:300;
-    transform:translateY(100%);
-    transition:transform 0.3s cubic-bezier(0.34,1.1,0.64,1);
-">
+<div id="more-drawer" style="display:none;position:fixed;bottom:0;left:0;right:0;background:var(--card);border-radius:24px 24px 0 0;border-top:1px solid var(--border);padding:12px 20px 40px;z-index:300;transform:translateY(100%);transition:transform 0.3s cubic-bezier(0.34,1.1,0.64,1);">
     <div style="width:40px;height:4px;background:var(--border);border-radius:2px;margin:0 auto 20px"></div>
     <div style="font-size:12px;font-weight:900;color:var(--muted);margin-bottom:12px">صفحات إضافية</div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
-        <button class="drawer-item" onclick="goToFromDrawer('metals')">
-            <span style="font-size:24px">⭐</span>
-            <span>المعادن</span>
-        </button>
-        <button class="drawer-item" onclick="goToFromDrawer('fuel')">
-            <span style="font-size:24px">⛽</span>
-            <span>الوقود</span>
-        </button>
-        <button class="drawer-item" onclick="goToFromDrawer('crypto')">
-            <span style="font-size:24px">₿</span>
-            <span>كريبتو</span>
-        </button>
+        <button class="drawer-item" onclick="goToFromDrawer('metals')"><span style="font-size:24px">⭐</span><span>المعادن</span></button>
+        <button class="drawer-item" onclick="goToFromDrawer('fuel')"><span style="font-size:24px">⛽</span><span>الوقود</span></button>
+        <button class="drawer-item" onclick="goToFromDrawer('crypto')"><span style="font-size:24px">₿</span><span>كريبتو</span></button>
     </div>
 </div>
 
-<!-- MAIN CONTENT -->
 <main>
 
-    <!-- ===== HOME PAGE ===== -->
+    <!-- HOME -->
     <div id="page-home" class="page active">
         <div class="page-header">
             <h1 class="page-title">السوق اللحظي 🇪🇬</h1>
             <div class="page-sub">
                 <span class="dot-pulse" style="width:6px;height:6px;background:var(--green);border-radius:50%;display:inline-block"></span>
-                بيانات محاكاة لحظية — يتجدد كل <span id="speed-display">3</span> ثواني
+                بيانات حقيقية — يتجدد كل <span id="speed-display">60</span> ثانية
             </div>
         </div>
 
-        <!-- Ticker -->
+        <div id="api-status-banner" class="api-status">⏳ جاري جلب البيانات الحقيقية...</div>
+
         <div class="ticker-wrap">
             <div class="ticker-inner" id="ticker-inner">
                 <span class="ticker-item"><span class="ticker-name">USD</span><span class="ticker-val" id="tk-usd">—</span></span>
@@ -772,7 +696,6 @@
                 <span class="ticker-item"><span class="ticker-name">فضة</span><span class="ticker-val" id="tk-silver">—</span></span>
                 <span class="ticker-item"><span class="ticker-name">BTC</span><span class="ticker-val" id="tk-btc">—</span></span>
                 <span class="ticker-item"><span class="ticker-name">ETH</span><span class="ticker-val" id="tk-eth">—</span></span>
-                <!-- Duplicate for seamless loop -->
                 <span class="ticker-item"><span class="ticker-name">USD</span><span class="ticker-val" id="tk-usd2">—</span></span>
                 <span class="ticker-item"><span class="ticker-name">EUR</span><span class="ticker-val" id="tk-eur2">—</span></span>
                 <span class="ticker-item"><span class="ticker-name">SAR</span><span class="ticker-val" id="tk-sar2">—</span></span>
@@ -784,31 +707,27 @@
             </div>
         </div>
 
-        <!-- Hero Grid -->
         <div class="hero-grid">
-            <!-- GOLD -->
             <div class="hero-gold">
-                <div class="gold-badge">⚡ ذهب مباشر</div>
+                <div class="gold-badge">🔴 ذهب حقيقي</div>
                 <div style="font-size:11px;color:#b45309;font-weight:700;margin-bottom:8px">عيار <span id="gold-grade-label">21</span></div>
                 <div class="gold-price" id="home-gold">—</div>
                 <div style="font-size:11px;color:var(--muted);margin-top:4px">ج.م / جرام</div>
                 <div class="mini-change change-flat" id="home-gold-change" style="margin-top:8px">—</div>
                 <div class="grade-btns">
-                    <button class="grade-btn" onclick="setGrade(24,1.1429)">عيار 24</button>
-                    <button class="grade-btn active" onclick="setGrade(21,1)">عيار 21</button>
-                    <button class="grade-btn" onclick="setGrade(18,0.8571)">عيار 18</button>
+                    <button class="grade-btn" onclick="setGrade(24, 1.1429, this)">عيار 24</button>
+                    <button class="grade-btn active" onclick="setGrade(21, 1, this)">عيار 21</button>
+                    <button class="grade-btn" onclick="setGrade(18, 0.8571, this)">عيار 18</button>
                 </div>
             </div>
-
-            <!-- Mini cards column -->
             <div style="display:flex;flex-direction:column;gap:14px">
-                <div class="mini-card" id="card-usd">
+                <div class="mini-card">
                     <div class="mini-icon">💵</div>
                     <div class="mini-label">الدولار الأمريكي</div>
                     <div class="mini-price" id="home-usd">—</div>
                     <div class="mini-change change-flat" id="home-usd-change">—</div>
                 </div>
-                <div class="mini-card" id="card-eur">
+                <div class="mini-card">
                     <div class="mini-icon">💶</div>
                     <div class="mini-label">اليورو</div>
                     <div class="mini-price" id="home-eur">—</div>
@@ -817,7 +736,6 @@
             </div>
         </div>
 
-        <!-- More cards row -->
         <div class="section-label">مؤشرات إضافية</div>
         <div class="grid-4" style="margin-bottom:16px">
             <div class="mini-card">
@@ -829,13 +747,13 @@
             <div class="mini-card">
                 <div class="mini-icon">⛽</div>
                 <div class="mini-label">بنزين 92</div>
-                <div class="mini-price" style="color:var(--orange)" id="home-b92">13.75</div>
+                <div class="mini-price" style="color:var(--orange)">22.25</div>
                 <div style="font-size:10px;color:var(--muted);margin-top:4px">ج.م / لتر</div>
             </div>
             <div class="mini-card">
                 <div class="mini-icon">🛢️</div>
                 <div class="mini-label">سولار</div>
-                <div class="mini-price" style="color:#64748b" id="home-solar">10.75</div>
+                <div class="mini-price" style="color:#64748b">20.50</div>
                 <div style="font-size:10px;color:var(--muted);margin-top:4px">ج.م / لتر</div>
             </div>
             <div class="mini-card">
@@ -846,8 +764,7 @@
             </div>
         </div>
 
-        <!-- EGX -->
-        <div class="section-label">بورصة مصر EGX</div>
+        <div class="section-label">بورصة مصر EGX — تقريبية</div>
         <div class="grid-3">
             <div class="egx-card">
                 <div class="egx-label">EGX 30</div>
@@ -865,9 +782,10 @@
                 <div class="mini-change change-flat" id="home-egx100-change" style="margin-top:8px">—</div>
             </div>
         </div>
+        <div style="font-size:11px;color:var(--muted);margin-top:10px;font-weight:600">⚠️ بيانات EGX تقريبية — API مدفوع غير متاح مجاناً</div>
     </div>
 
-    <!-- ===== CURRENCIES PAGE ===== -->
+    <!-- CURRENCIES -->
     <div id="page-currencies" class="page">
         <div class="page-header">
             <h1 class="page-title">أسعار العملات الأجنبية</h1>
@@ -884,19 +802,17 @@
                         <th>%</th>
                     </tr>
                 </thead>
-                <tbody id="currencies-tbody"></tbody>
+                <tbody id="currencies-tbody"><tr><td colspan="5" style="text-align:center;padding:30px;color:var(--muted)">⏳ جاري جلب البيانات...</td></tr></tbody>
             </table>
         </div>
     </div>
 
-    <!-- ===== METALS PAGE ===== -->
+    <!-- METALS -->
     <div id="page-metals" class="page">
         <div class="page-header">
             <h1 class="page-title">بورصة المعادن</h1>
             <div class="page-sub">أسعار المعادن بالجنيه المصري</div>
         </div>
-
-        <!-- Gold grades -->
         <div class="section-label">الذهب — عيارات</div>
         <div class="grid-4" style="margin-bottom:20px">
             <div class="mini-card">
@@ -920,8 +836,6 @@
                 <div style="font-size:10px;color:var(--muted)">ج.م / جرام</div>
             </div>
         </div>
-
-        <!-- Metals table -->
         <div class="section-label">جميع المعادن</div>
         <div class="card" style="overflow:hidden;padding:0">
             <table class="data-table">
@@ -929,91 +843,40 @@
                     <tr>
                         <th>المعدن</th>
                         <th>السعر (ج.م/جرام)</th>
-                        <th>السعر العالمي</th>
+                        <th>السعر العالمي (USD/أونصة)</th>
                         <th>التغيير</th>
                     </tr>
                 </thead>
-                <tbody id="metals-tbody"></tbody>
+                <tbody id="metals-tbody"><tr><td colspan="4" style="text-align:center;padding:30px;color:var(--muted)">⏳ جاري جلب البيانات...</td></tr></tbody>
             </table>
         </div>
     </div>
 
-    <!-- ===== FUEL PAGE ===== -->
+    <!-- FUEL — أسعار مارس 2026 المحدثة -->
     <div id="page-fuel" class="page">
         <div class="page-header">
             <h1 class="page-title">أسعار الوقود</h1>
-            <div class="page-sub">أسعار المواد البترولية المصرية — مُحدَّثة رسمياً</div>
+            <div class="page-sub">أسعار المواد البترولية المصرية — رسمية من وزارة البترول</div>
         </div>
-
-        <div style="display:flex;flex-direction:column;gap:14px" id="fuel-list">
-            <div class="fuel-card">
-                <div class="fuel-icon" style="background:rgba(249,115,22,0.15)">⛽</div>
-                <div>
-                    <div class="fuel-name">بنزين 80</div>
-                    <div class="fuel-price" style="color:var(--muted)">9.25</div>
-                    <div class="fuel-unit">ج.م / لتر</div>
-                </div>
-                <div class="mini-change change-flat" style="margin-right:auto">ثابت</div>
-            </div>
-            <div class="fuel-card">
-                <div class="fuel-icon" style="background:rgba(249,115,22,0.15)">⛽</div>
-                <div>
-                    <div class="fuel-name">بنزين 92</div>
-                    <div class="fuel-price" style="color:var(--orange)">13.75</div>
-                    <div class="fuel-unit">ج.م / لتر</div>
-                </div>
-                <div class="mini-change change-flat" style="margin-right:auto">ثابت</div>
-            </div>
-            <div class="fuel-card">
-                <div class="fuel-icon" style="background:rgba(249,115,22,0.15)">⛽</div>
-                <div>
-                    <div class="fuel-name">بنزين 95</div>
-                    <div class="fuel-price" style="color:var(--orange)">15.00</div>
-                    <div class="fuel-unit">ج.م / لتر</div>
-                </div>
-                <div class="mini-change change-flat" style="margin-right:auto">ثابت</div>
-            </div>
-            <div class="fuel-card">
-                <div class="fuel-icon" style="background:rgba(100,116,139,0.15)">🛢️</div>
-                <div>
-                    <div class="fuel-name">سولار (ديزل)</div>
-                    <div class="fuel-price" style="color:#64748b">10.75</div>
-                    <div class="fuel-unit">ج.م / لتر</div>
-                </div>
-                <div class="mini-change change-flat" style="margin-right:auto">ثابت</div>
-            </div>
-            <div class="fuel-card">
-                <div class="fuel-icon" style="background:rgba(59,130,246,0.15)">🔵</div>
-                <div>
-                    <div class="fuel-name">غاز طبيعي (CNG)</div>
-                    <div class="fuel-price" style="color:var(--blue)">4.00</div>
-                    <div class="fuel-unit">ج.م / م³</div>
-                </div>
-                <div class="mini-change change-flat" style="margin-right:auto">ثابت</div>
-            </div>
-            <div class="fuel-card">
-                <div class="fuel-icon" style="background:rgba(168,85,247,0.15)">🟣</div>
-                <div>
-                    <div class="fuel-name">بوتاجاز (اسطوانة 12كج)</div>
-                    <div class="fuel-price" style="color:#a855f7">100</div>
-                    <div class="fuel-unit">ج.م / اسطوانة</div>
-                </div>
-                <div class="mini-change change-flat" style="margin-right:auto">ثابت</div>
-            </div>
+        <div style="display:flex;flex-direction:column;gap:14px">
+            <div class="fuel-card"><div class="fuel-icon" style="background:rgba(249,115,22,0.15)">⛽</div><div><div class="fuel-name">بنزين 80</div><div class="fuel-price" style="color:var(--muted)">20.75</div><div class="fuel-unit">ج.م / لتر</div></div><div class="mini-change change-up" style="margin-right:auto">+3.00</div></div>
+            <div class="fuel-card"><div class="fuel-icon" style="background:rgba(249,115,22,0.15)">⛽</div><div><div class="fuel-name">بنزين 92</div><div class="fuel-price" style="color:var(--orange)">22.25</div><div class="fuel-unit">ج.م / لتر</div></div><div class="mini-change change-up" style="margin-right:auto">+3.00</div></div>
+            <div class="fuel-card"><div class="fuel-icon" style="background:rgba(249,115,22,0.15)">⛽</div><div><div class="fuel-name">بنزين 95</div><div class="fuel-price" style="color:var(--orange)">24.00</div><div class="fuel-unit">ج.م / لتر</div></div><div class="mini-change change-up" style="margin-right:auto">+3.00</div></div>
+            <div class="fuel-card"><div class="fuel-icon" style="background:rgba(100,116,139,0.15)">🛢️</div><div><div class="fuel-name">سولار (ديزل)</div><div class="fuel-price" style="color:#64748b">20.50</div><div class="fuel-unit">ج.م / لتر</div></div><div class="mini-change change-up" style="margin-right:auto">+3.00</div></div>
+            <div class="fuel-card"><div class="fuel-icon" style="background:rgba(59,130,246,0.15)">🔵</div><div><div class="fuel-name">غاز تموين السيارات (CNG)</div><div class="fuel-price" style="color:var(--blue)">13.00</div><div class="fuel-unit">ج.م / م³</div></div><div class="mini-change change-up" style="margin-right:auto">+3.00</div></div>
+            <div class="fuel-card"><div class="fuel-icon" style="background:rgba(168,85,247,0.15)">🟣</div><div><div class="fuel-name">بوتاجاز (اسطوانة 12.5 كج)</div><div class="fuel-price" style="color:#a855f7">275</div><div class="fuel-unit">ج.م / اسطوانة</div></div><div class="mini-change change-up" style="margin-right:auto">+50</div></div>
+            <div class="fuel-card"><div class="fuel-icon" style="background:rgba(168,85,247,0.15)">🟣</div><div><div class="fuel-name">بوتاجاز (اسطوانة 25 كج)</div><div class="fuel-price" style="color:#a855f7">550</div><div class="fuel-unit">ج.م / اسطوانة</div></div><div class="mini-change change-up" style="margin-right:auto">+100</div></div>
         </div>
-
         <div class="card" style="margin-top:20px;background:rgba(245,158,11,0.05);border-color:rgba(245,158,11,0.2)">
-            <div style="font-size:12px;color:#b45309;font-weight:700">
-                ⚠️ تنبيه: أسعار الوقود يحددها الحكومة المصرية كل 3 أشهر. الأسعار المعروضة هي آخر الأسعار المعلنة رسمياً.
-            </div>
+            <div style="font-size:12px;color:#b45309;font-weight:700">📅 آخر تحديث: مارس 2026 — قرار وزارة البترول والثروة المعدنية</div>
         </div>
     </div>
 
-    <!-- ===== CRYPTO PAGE ===== -->
+    <!-- CRYPTO -->
     <div id="page-crypto" class="page">
         <div class="page-header">
             <h1 class="page-title">العملات الرقمية</h1>
-            <div class="page-sub">بالدولار الأمريكي (USD)</div>
+            <div class="page-sub">بالدولار الأمريكي — مصدر: CoinGecko API (مجاني)</div>
         </div>
         <div class="card" style="overflow:hidden;padding:0">
             <table class="data-table">
@@ -1022,15 +885,15 @@
                         <th>العملة</th>
                         <th>السعر (USD)</th>
                         <th>بالجنيه (ج.م)</th>
-                        <th>التغيير</th>
+                        <th>24 ساعة %</th>
                     </tr>
                 </thead>
-                <tbody id="crypto-tbody"></tbody>
+                <tbody id="crypto-tbody"><tr><td colspan="4" style="text-align:center;padding:30px;color:var(--muted)">⏳ جاري جلب البيانات...</td></tr></tbody>
             </table>
         </div>
     </div>
 
-    <!-- ===== SETTINGS PAGE ===== -->
+    <!-- SETTINGS -->
     <div id="page-settings" class="page">
         <div class="page-header">
             <h1 class="page-title">الإعدادات</h1>
@@ -1041,61 +904,74 @@
                     <div class="setting-label">🌙 وضع المظهر</div>
                     <div class="setting-desc" id="theme-desc">الوضع الليلي مفعّل</div>
                 </div>
-                <button class="theme-btn" onclick="toggleTheme()" id="theme-toggle-btn">تبديل المظهر</button>
+                <button class="theme-btn" onclick="toggleTheme()">تبديل المظهر</button>
             </div>
             <div class="setting-row">
                 <div style="flex:1">
                     <div class="setting-label">⚡ سرعة التحديث</div>
-                    <div class="setting-desc">كل <span id="speed-val">3</span> ثواني</div>
-                    <input type="range" class="speed-slider" id="speed-range" min="2" max="15" value="3">
+                    <div class="setting-desc">كل <span id="speed-val">60</span> ثانية</div>
+                    <input type="range" class="speed-slider" id="speed-range" min="30" max="300" value="60" step="30">
                 </div>
             </div>
             <div class="setting-row">
                 <div>
+                    <div class="setting-label">🔄 تحديث يدوي</div>
+                    <div class="setting-desc">اجلب البيانات الآن من جميع المصادر</div>
+                </div>
+                <button class="theme-btn" onclick="fetchAll()">تحديث الآن</button>
+            </div>
+            <div class="setting-row">
+                <div>
                     <div class="setting-label">🔔 تنبيهات السعر</div>
-                    <div class="setting-desc">اضبط تنبيهات على أي سعر من صفحة التنبيهات</div>
+                    <div class="setting-desc">اضبط تنبيهات من صفحة التنبيهات</div>
                 </div>
                 <button class="theme-btn" onclick="goTo('alerts', document.querySelector('[data-page=alerts]'))">إدارة</button>
             </div>
         </div>
-
+        <div class="card" style="margin-top:16px">
+            <div style="font-size:13px;font-weight:700;color:var(--blue);margin-bottom:12px">📡 مصادر البيانات</div>
+            <div id="api-sources" style="font-size:12px;color:var(--muted);line-height:2">
+                <div>💱 العملات: <span style="color:var(--green)">open.er-api.com (مجاني) + Frankfurter backup</span></div>
+                <div>🥇 الذهب والمعادن: <span style="color:var(--green)">metals.live + goldprice.org + PAXG</span></div>
+                <div>₿ الكريبتو: <span style="color:var(--green)">CoinGecko API (مجاني)</span></div>
+                <div>⛽ الوقود: <span style="color:var(--gold)">بيانات رسمية محدثة (مارس 2026)</span></div>
+                <div>📈 EGX: <span style="color:var(--gold)">تقريبي (API مدفوع)</span></div>
+            </div>
+        </div>
         <div class="card" style="margin-top:16px;background:rgba(59,130,246,0.05);border-color:rgba(59,130,246,0.2)">
             <div style="font-size:13px;font-weight:700;color:var(--blue);margin-bottom:8px">ℹ️ عن التطبيق</div>
             <div style="font-size:12px;color:var(--muted);line-height:1.8">
                 مؤشر مصر — نبض السوق المصري<br>
-                البيانات المالية: محاكاة ذكية تعتمد على سعر الصرف الحقيقي<br>
-                أسعار الوقود: رسمية من وزارة البترول المصرية<br>
-                <span style="color:var(--green)">الإصدار 2.0</span>
+                الذهب: سعر دولاري حقيقي × سعر صرف الجنيه الحقيقي<br>
+                الفضة: محسوبة من سعر الأونصة العالمي بالجنيه<br>
+                <span style="color:var(--green)">الإصدار 4.0 — بيانات حقيقية محدثة</span>
             </div>
         </div>
     </div>
 
-    <!-- ===== ALERTS PAGE ===== -->
+    <!-- ALERTS -->
     <div id="page-alerts" class="page">
         <div class="page-header">
             <h1 class="page-title">🔔 تنبيهات السعر</h1>
-            <div class="page-sub">هيتنبهلك على طول لما السعر يوصل للحد اللي إنت محددته</div>
+            <div class="page-sub">هيتنبهلك لما السعر يوصل للحد المحدد</div>
         </div>
-
-        <!-- ADD ALERT FORM -->
         <div class="card" style="margin-bottom:20px">
             <div style="font-size:14px;font-weight:900;margin-bottom:16px;color:var(--blue)">➕ تنبيه جديد</div>
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px">
                 <div>
                     <label class="alert-label">الأصل</label>
                     <select id="alert-asset" class="alert-input">
-                        <option value="usd">💵 دولار أمريكي (ج.م)</option>
-                        <option value="eur">💶 يورو (ج.م)</option>
-                        <option value="gbp">💷 إسترليني (ج.م)</option>
-                        <option value="sar">🇸🇦 ريال سعودي (ج.م)</option>
-                        <option value="aed">🇦🇪 درهم إماراتي (ج.م)</option>
-                        <option value="kwd">🇰🇼 دينار كويتي (ج.م)</option>
-                        <option value="gold21">🥇 ذهب عيار 21 (ج.م/جرام)</option>
-                        <option value="silver">🥈 فضة (ج.م/جرام)</option>
-                        <option value="btc">₿ بيتكوين (USD)</option>
-                        <option value="eth">⟠ إيثريوم (USD)</option>
-                        <option value="sol">◎ سولانا (USD)</option>
-                        <option value="egx30">📈 EGX 30</option>
+                        <option value="usd">💵 دولار أمريكي</option>
+                        <option value="eur">💶 يورو</option>
+                        <option value="gbp">💷 إسترليني</option>
+                        <option value="sar">🇸🇦 ريال سعودي</option>
+                        <option value="aed">🇦🇪 درهم إماراتي</option>
+                        <option value="kwd">🇰🇼 دينار كويتي</option>
+                        <option value="gold21">🥇 ذهب عيار 21</option>
+                        <option value="silver">🥈 فضة</option>
+                        <option value="btc">₿ بيتكوين</option>
+                        <option value="eth">⟠ إيثريوم</option>
+                        <option value="sol">◎ سولانا</option>
                     </select>
                 </div>
                 <div>
@@ -1114,23 +990,17 @@
                 <label class="alert-label">ملاحظة (اختياري)</label>
                 <input type="text" id="alert-note" class="alert-input" placeholder="مثال: وقت مناسب للشراء">
             </div>
-            <button onclick="addAlert()" class="alert-add-btn">
-                🔔 إضافة التنبيه
-            </button>
+            <button onclick="addAlert()" class="alert-add-btn">🔔 إضافة التنبيه</button>
         </div>
-
-        <!-- ACTIVE ALERTS -->
         <div class="section-label">التنبيهات النشطة</div>
         <div id="alerts-list">
             <div id="alerts-empty" class="card" style="text-align:center;padding:40px;color:var(--muted)">
                 <div style="font-size:36px;margin-bottom:12px">🔕</div>
                 <div style="font-weight:700">مفيش تنبيهات لسه</div>
-                <div style="font-size:12px;margin-top:4px">أضف تنبيه من فوق وهيشتغل على طول</div>
+                <div style="font-size:12px;margin-top:4px">أضف تنبيه من فوق</div>
             </div>
         </div>
-
-        <!-- FIRED ALERTS LOG -->
-        <div class="section-label" style="margin-top:24px">سجل التنبيهات المُطلقة</div>
+        <div class="section-label" style="margin-top:24px">سجل التنبيهات</div>
         <div id="alerts-log">
             <div id="log-empty" class="card" style="text-align:center;padding:24px;color:var(--muted)">
                 <div style="font-size:12px;font-weight:700">لا يوجد سجل بعد</div>
@@ -1140,262 +1010,247 @@
 
 </main>
 
-<!-- ===== TOAST NOTIFICATION ===== -->
 <div id="toast-container" style="position:fixed;top:20px;left:50%;transform:translateX(-50%);z-index:9999;display:flex;flex-direction:column;gap:10px;pointer-events:none;width:min(90vw,380px)"></div>
 
-
 <script>
-// ============================================================
-//  STATE — كل البيانات هنا
-// ============================================================
+// ================================================================
+//  STATE
+// ================================================================
 const S = {
-    // ─── أسعار الصرف الحقيقية — 27 أبريل 2026 ───────────────
-    // المصدر: البنك المركزي المصري + البنك الأهلي + CNN الاقتصادية
-    usd: 52.63,   // دولار أمريكي (البنك المركزي اليوم)
-    eur: 59.80,   // يورو  (USD × 1.137)
-    gbp: 69.90,   // جنيه إسترليني (USD × 1.329)
-    sar: 14.05,   // ريال سعودي (مصرف أبوظبي الإسلامي اليوم)
-    aed: 14.33,   // درهم إماراتي (البنك الأهلي اليوم)
-    kwd: 171.20,  // دينار كويتي  (USD × 3.254)
-    qar: 14.47,   // ريال قطري  (USD × 0.275)
-    bhd: 139.50,  // دينار بحريني (USD × 2.652)
-    jod: 74.30,   // دينار أردني  (USD × 1.412)
-    cad: 38.20,   // دولار كندي  (USD × 0.726)
-    chf: 62.10,   // فرنك سويسري (USD × 1.180)
-    jpy: 0.348,   // ين ياباني   (USD ÷ 151.4 × 100) لكل 100 ين
-
-    // ─── الذهب — سوق الصاغة المصري اليوم ───────────────────
-    // المصدر: المصري اليوم + شعبة الذهب — 27 أبريل 2026
-    // عيار 21: 7,005 ج.م | عيار 24: 8,005 ج.م | عيار 18: 6,004 ج.م
-    gold21: 7005.00,   // عيار 21 — الأساس الحقيقي اليوم
-    goldMult: 1,
-    goldGrade: 21,
-
-    // ─── الفضة — سعر الجرام في مصر ─────────────────────────
-    // المصدر: مرجعي + gold-price-egypt — 27 أبريل 2026
-    // فضة عيار 999: ~140 ج.م/جرام | فضة إسترليني 925: ~130 ج.م
-    silver: 140.70,   // عيار 999 نقي
-
-    // ─── بلاتين وبلاديوم (مشتق من الأسعار العالمية) ─────────
-    // بلاتين ~970 USD/أونصة × 52.63 ÷ 31.1 ≈ 1642 → جرام ≈ 1642
-    platinum: 1642.00,
-    // بلاديوم ~1020 USD/أونصة × 52.63 ÷ 31.1 ≈ 1727 → جرام
-    palladium: 1727.00,
-
-    // ─── كريبتو — أسعار عالمية حقيقية (USD) ────────────────
-    // المصدر: CoinMarketCap — 27 أبريل 2026
-    btc: 94500.00,   // بيتكوين — ~94,500 USD
-    eth: 1800.00,    // إيثريوم — ~1,800 USD
-    bnb: 600.00,     // بينانس كوين — ~600 USD
-    sol: 148.00,     // سولانا — ~148 USD
-    xrp: 2.22,       // ريبل — ~2.22 USD
-    usdt: 1.00,
-
-    // ─── بورصة مصر EGX — أرقام تقريبية حقيقية ──────────────
-    egx30: 32180.00,
-    egx70: 5640.00,
-    egx100: 7280.00,
-
-    // Previous values for diff calculation
+    usd: null, eur: null, gbp: null, sar: null, aed: null,
+    kwd: null, qar: null, bhd: null, jod: null, cad: null, chf: null, jpy: null,
+    gold24_usd_oz: null,
+    silver_usd_oz: null,
+    platinum_usd_oz: null,
+    palladium_usd_oz: null,
+    gold21: null, gold24: null, gold18: null, gold14: null,
+    silver: null, platinum: null, palladium: null,
+    goldMult: 1, goldGrade: 21,
+    btc: null, eth: null, bnb: null, sol: null, xrp: null,
+    btc_24h: 0, eth_24h: 0, bnb_24h: 0, sol_24h: 0, xrp_24h: 0,
+    egx30: 32180, egx70: 5640, egx100: 7280,
     prev: {}
 };
 
-// Save previous state
 function savePrev() {
+    // حفظ كل القيم الحالية قبل التحديث
     S.prev = {
-        usd: S.usd, eur: S.eur, gbp: S.gbp, sar: S.sar,
-        aed: S.aed, kwd: S.kwd, qar: S.qar, bhd: S.bhd,
-        jod: S.jod, cad: S.cad, chf: S.chf, jpy: S.jpy,
-        gold21: S.gold21, silver: S.silver, platinum: S.platinum,
+        usd: S.usd, eur: S.eur, gbp: S.gbp, sar: S.sar, aed: S.aed,
+        kwd: S.kwd, qar: S.qar, bhd: S.bhd, jod: S.jod, cad: S.cad,
+        chf: S.chf, jpy: S.jpy,
+        gold21: S.gold21,
+        silver: S.silver,       // ← FIX: كان مفيش
+        platinum: S.platinum,
         palladium: S.palladium,
         btc: S.btc, eth: S.eth, bnb: S.bnb, sol: S.sol, xrp: S.xrp,
-        egx30: S.egx30, egx70: S.egx70, egx100: S.egx100
     };
 }
 
-savePrev();
+// ================================================================
+//  حساب المعادن بالجنيه
+// ================================================================
+function calcMetalsInEGP() {
+    if (!S.usd || !S.gold24_usd_oz) return;
+    const OZ_TO_GRAM = 31.1035;
+    const gold24_egp_gram = (S.gold24_usd_oz / OZ_TO_GRAM) * S.usd;
+    S.gold24 = gold24_egp_gram;
+    S.gold21 = gold24_egp_gram * (21 / 24);
+    S.gold18 = gold24_egp_gram * (18 / 24);
+    S.gold14 = gold24_egp_gram * (14 / 24);
+    // FIX: الفضة — بنفس المنطق بالضبط
+    if (S.silver_usd_oz)    S.silver    = (S.silver_usd_oz / OZ_TO_GRAM) * S.usd;
+    if (S.platinum_usd_oz)  S.platinum  = (S.platinum_usd_oz / OZ_TO_GRAM) * S.usd;
+    if (S.palladium_usd_oz) S.palladium = (S.palladium_usd_oz / OZ_TO_GRAM) * S.usd;
+}
 
-// ============================================================
-//  ENGINE — المحرك الذكي
-// ============================================================
-var engine = function() {
+// ================================================================
+//  API 1: العملات — FIX: استخدام USD كـ base مباشرةً
+// ================================================================
+async function fetchCurrencies() {
+    // المحاولة الأولى: open.er-api.com من USD مباشرة (أكثر موثوقية)
+    try {
+        const res = await fetch('https://open.er-api.com/v6/latest/USD');
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const data = await res.json();
+        if (!data.rates || !data.rates.EGP) throw new Error('No EGP rate');
+        const r = data.rates;
+        const egp = r.EGP; // كم جنيه = 1 دولار
+        // كل العملات = (EGP / العملة) = عدد الجنيهات لكل وحدة
+        S.usd = egp;
+        S.eur = egp / r.EUR;
+        S.gbp = egp / r.GBP;
+        S.sar = egp / r.SAR;
+        S.aed = egp / r.AED;
+        S.kwd = egp / r.KWD;
+        S.qar = egp / r.QAR;
+        S.bhd = egp / r.BHD;
+        S.jod = egp / r.JOD;
+        S.cad = egp / r.CAD;
+        S.chf = egp / r.CHF;
+        S.jpy = egp / r.JPY;  // ← لكل 1 ين (صغير)
+        return true;
+    } catch (e) {
+        console.warn('open.er-api failed, trying Frankfurter...', e.message);
+        return fetchCurrenciesBackup();
+    }
+}
+
+async function fetchCurrenciesBackup() {
+    // Frankfurter: من USD نحصل على باقي العملات + EGP
+    try {
+        const res = await fetch('https://api.frankfurter.app/latest?from=USD&to=EGP,EUR,GBP,SAR,AED,KWD,QAR,BHD,JOD,CAD,CHF,JPY');
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const data = await res.json();
+        if (!data.rates || !data.rates.EGP) throw new Error('No EGP');
+        const r = data.rates;
+        const egp = r.EGP;
+        S.usd = egp;
+        if (r.EUR) S.eur = egp / r.EUR;
+        if (r.GBP) S.gbp = egp / r.GBP;
+        if (r.SAR) S.sar = egp / r.SAR;
+        if (r.AED) S.aed = egp / r.AED;
+        if (r.KWD) S.kwd = egp / r.KWD;
+        if (r.QAR) S.qar = egp / r.QAR;
+        if (r.BHD) S.bhd = egp / r.BHD;
+        if (r.JOD) S.jod = egp / r.JOD;
+        if (r.CAD) S.cad = egp / r.CAD;
+        if (r.CHF) S.chf = egp / r.CHF;
+        if (r.JPY) S.jpy = egp / r.JPY;
+        return true;
+    } catch (e) {
+        console.error('All currency APIs failed:', e.message);
+        return false;
+    }
+}
+
+// ================================================================
+//  API 2: المعادن — محاولات متعددة
+// ================================================================
+async function fetchMetals() {
+    // محاولة 1: metals.live
+    try {
+        const res = await fetch('https://metals.live/api/spot');
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const data = await res.json();
+        if (Array.isArray(data) && data.length > 0) {
+            const spot = data[0];
+            if (spot.gold)      S.gold24_usd_oz    = parseFloat(spot.gold);
+            if (spot.silver)    S.silver_usd_oz    = parseFloat(spot.silver);
+            if (spot.platinum)  S.platinum_usd_oz  = parseFloat(spot.platinum);
+            if (spot.palladium) S.palladium_usd_oz = parseFloat(spot.palladium);
+            if (S.gold24_usd_oz && S.silver_usd_oz) {
+                calcMetalsInEGP();
+                return true;
+            }
+        }
+    } catch(e) { console.warn('metals.live failed:', e.message); }
+
+    // محاولة 2: goldprice.org عبر allorigins
+    try {
+        const url = encodeURIComponent('https://data-asg.goldprice.org/GetData/USD/2');
+        const res = await fetch(`https://api.allorigins.win/get?url=${url}`);
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const wrapper = await res.json();
+        // الشكل المتوقع: "1:GOLD_PRICE:1:SILVER_PRICE" أو مشابه
+        const text = (wrapper.contents || '').replace(/["\[\]]/g, '');
+        const parts = text.split(',');
+        // goldprice.org يرجع: خامات متعددة — نبحث عن قيم منطقية
+        let goldFound = false, silverFound = false;
+        for (const p of parts) {
+            const nums = p.split(':').map(x => parseFloat(x)).filter(x => !isNaN(x) && x > 0);
+            for (const n of nums) {
+                if (n > 1800 && n < 4000 && !goldFound) { S.gold24_usd_oz = n; goldFound = true; }
+                if (n > 20 && n < 100 && !silverFound) { S.silver_usd_oz = n; silverFound = true; }
+            }
+        }
+        if (goldFound) {
+            calcMetalsInEGP();
+            return silverFound;
+        }
+    } catch(e) { console.warn('goldprice.org failed:', e.message); }
+
+    // محاولة 3: CoinGecko — PAXG للذهب + XAG للفضة
+    try {
+        const res = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=pax-gold,silver&vs_currencies=usd');
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const data = await res.json();
+        if (data['pax-gold']?.usd) {
+            S.gold24_usd_oz = data['pax-gold'].usd;
+        }
+        // ملاحظة: CoinGecko مش عنده silver عادةً، لكن نحاول
+        if (data['silver']?.usd) {
+            S.silver_usd_oz = data['silver'].usd;
+        }
+        if (S.gold24_usd_oz) {
+            calcMetalsInEGP();
+            return true;
+        }
+    } catch(e) { console.warn('CoinGecko metals failed:', e.message); }
+
+    console.warn('All metals APIs failed');
+    return false;
+}
+
+// ================================================================
+//  API 3: الكريبتو
+// ================================================================
+async function fetchCrypto() {
+    try {
+        const ids = 'bitcoin,ethereum,binancecoin,solana,ripple';
+        const res = await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${ids}&vs_currencies=usd&include_24hr_change=true`);
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const data = await res.json();
+        if (data.bitcoin)      { S.btc = data.bitcoin.usd;      S.btc_24h = data.bitcoin.usd_24h_change || 0; }
+        if (data.ethereum)     { S.eth = data.ethereum.usd;     S.eth_24h = data.ethereum.usd_24h_change || 0; }
+        if (data.binancecoin)  { S.bnb = data.binancecoin.usd;  S.bnb_24h = data.binancecoin.usd_24h_change || 0; }
+        if (data.solana)       { S.sol = data.solana.usd;       S.sol_24h = data.solana.usd_24h_change || 0; }
+        if (data.ripple)       { S.xrp = data.ripple.usd;       S.xrp_24h = data.ripple.usd_24h_change || 0; }
+        return true;
+    } catch (e) {
+        console.error('CoinGecko crypto failed:', e.message);
+        return false;
+    }
+}
+
+// ================================================================
+//  MAIN FETCH
+// ================================================================
+async function fetchAll() {
+    const banner = document.getElementById('api-status-banner');
+    if (banner) { banner.className = 'api-status'; banner.textContent = '⏳ جاري جلب البيانات الحقيقية...'; }
+
     savePrev();
 
-    // USD drift — القائد
-    const usdDrift = (Math.random() - 0.48) * 0.06;
-    S.usd = Math.max(51.0, Math.min(55.0, S.usd + usdDrift));
+    const [currOk, metalsOk, cryptoOk] = await Promise.all([
+        fetchCurrencies(),
+        fetchMetals(),
+        fetchCrypto()
+    ]);
 
-    // Currencies follow USD loosely
-    S.eur = S.usd * 1.087 + rnd(0.02);
-    S.gbp = S.usd * 1.260 + rnd(0.02);
-    S.sar = S.usd * 0.2667 + rnd(0.005);
-    S.aed = S.usd * 0.2722 + rnd(0.005);
-    S.kwd = S.usd * 3.260 + rnd(0.01);
-    S.qar = S.usd * 0.2747 + rnd(0.005);
-    S.bhd = S.usd * 2.653 + rnd(0.01);
-    S.jod = S.usd * 1.409 + rnd(0.005);
-    S.cad = S.usd * 0.737 + rnd(0.01);
-    S.chf = S.usd * 1.130 + rnd(0.01);
-    S.jpy = S.usd * 0.00663 + rnd(0.0001);
+    if (banner) {
+        const allOk = currOk && metalsOk && cryptoOk;
+        if (allOk) {
+            banner.className = 'api-status ok';
+            banner.textContent = '✅ جميع البيانات محدثة';
+        } else {
+            banner.className = currOk ? 'api-status' : 'api-status error';
+            banner.textContent = `العملات: ${currOk?'✅':'❌'} | معادن: ${metalsOk?'✅':'❌'} | كريبتو: ${cryptoOk?'✅':'❌'}`;
+        }
+    }
 
-    // Gold — يتأثر بالدولار + حركة مستقلة
-    const goldDrift = usdDrift * 80 + (Math.random() - 0.5) * 3;
-    S.gold21 = Math.max(6500, Math.min(8500, S.gold21 + goldDrift));
-
-    // فضة — تتحرك حوالين 140 ج.م
-    S.silver = Math.max(120, Math.min(170, S.silver + rnd(0.8)));
-    // بلاتين ~1640 ج.م/جرام
-    S.platinum = Math.max(1400, Math.min(2000, S.platinum + rnd(5)));
-    // بلاديوم ~1727 ج.م/جرام
-    S.palladium = Math.max(1500, Math.min(2200, S.palladium + rnd(6)));
-
-    // Crypto — volatile
-    // كريبتو — أسعار 2026 الحقيقية
-    S.btc = Math.max(80000, Math.min(110000, S.btc + rnd(400)));
-    S.eth = Math.max(1400, Math.min(2500, S.eth + rnd(20)));
-    S.bnb = Math.max(500, Math.min(750, S.bnb + rnd(5)));
-    S.sol = Math.max(100, Math.min(200, S.sol + rnd(2)));
-    S.xrp = Math.max(1.8, Math.min(3.0, S.xrp + rnd(0.02)));
-
-    // EGX — بورصة مصر 2026
-    S.egx30  = Math.max(30000, Math.min(35000, S.egx30  + rnd(80)));
-    S.egx70  = Math.max(5000,  Math.min(6500,  S.egx70  + rnd(20)));
-    S.egx100 = Math.max(6500,  Math.min(8500,  S.egx100 + rnd(30)));
+    const now = new Date().toLocaleTimeString('ar-EG');
+    const sidebar = document.getElementById('last-update-sidebar');
+    if (sidebar) sidebar.textContent = `آخر تحديث: ${now}`;
 
     renderAll();
+    checkAlerts();
 }
 
-function rnd(scale) { return (Math.random() - 0.5) * scale * 2; }
-
-// ============================================================
-//  RENDER — تحديث الواجهة
-// ============================================================
-function renderAll() {
-    const gold = S.gold21 * S.goldMult;
-    const prevGold = S.prev.gold21 * S.goldMult;
-
-    // HOME PAGE
-    setPrice('home-gold', gold, 'home-gold-change', prevGold, 2);
-    setPrice('home-usd', S.usd, 'home-usd-change', S.prev.usd, 2);
-    setPrice('home-eur', S.eur, 'home-eur-change', S.prev.eur, 2);
-    setPrice('home-btc', S.btc, 'home-btc-change', S.prev.btc, 0);
-    setPrice('home-silver', S.silver, 'home-silver-change', S.prev.silver, 2);
-    setPrice('home-egx30', S.egx30, 'home-egx30-change', S.prev.egx30, 2);
-    setPrice('home-egx70', S.egx70, 'home-egx70-change', S.prev.egx70, 2);
-    setPrice('home-egx100', S.egx100, 'home-egx100-change', S.prev.egx100, 2);
-
-    // Ticker
-    const setTk = (id1, id2, val, d) => {
-        const v = fmt(val, d);
-        const el1 = document.getElementById(id1);
-        const el2 = document.getElementById(id2);
-        if (el1) el1.textContent = v;
-        if (el2) el2.textContent = v;
-    };
-    setTk('tk-usd','tk-usd2', S.usd, 2);
-    setTk('tk-eur','tk-eur2', S.eur, 2);
-    setTk('tk-sar','tk-sar2', S.sar, 2);
-    setTk('tk-aed','tk-aed2', S.aed, 2);
-    setTk('tk-gold','tk-gold2', S.gold21, 2);
-    setTk('tk-silver','tk-silver2', S.silver, 2);
-    setTk('tk-btc','tk-btc2', S.btc, 0);
-    setTk('tk-eth','tk-eth2', S.eth, 0);
-
-    // CURRENCIES
-    const tbody = document.getElementById('currencies-tbody');
-    if (tbody) {
-        const currencies = [
-            { name: '🇺🇸 دولار أمريكي', code: 'USD', val: S.usd, prev: S.prev.usd },
-            { name: '🇪🇺 يورو', code: 'EUR', val: S.eur, prev: S.prev.eur },
-            { name: '🇬🇧 جنيه إسترليني', code: 'GBP', val: S.gbp, prev: S.prev.gbp },
-            { name: '🇸🇦 ريال سعودي', code: 'SAR', val: S.sar, prev: S.prev.sar },
-            { name: '🇦🇪 درهم إماراتي', code: 'AED', val: S.aed, prev: S.prev.aed },
-            { name: '🇰🇼 دينار كويتي', code: 'KWD', val: S.kwd, prev: S.prev.kwd },
-            { name: '🇶🇦 ريال قطري', code: 'QAR', val: S.qar, prev: S.prev.qar },
-            { name: '🇧🇭 دينار بحريني', code: 'BHD', val: S.bhd, prev: S.prev.bhd },
-            { name: '🇯🇴 دينار أردني', code: 'JOD', val: S.jod, prev: S.prev.jod },
-            { name: '🇨🇦 دولار كندي', code: 'CAD', val: S.cad, prev: S.prev.cad },
-            { name: '🇨🇭 فرنك سويسري', code: 'CHF', val: S.chf, prev: S.prev.chf },
-            { name: '🇯🇵 ين ياباني ×100', code: 'JPY', val: S.jpy * 100, prev: S.prev.jpy * 100 },
-        ];
-        tbody.innerHTML = currencies.map(c => {
-            const diff = c.val - c.prev;
-            const pct = ((diff / c.prev) * 100).toFixed(3);
-            const cls = diff > 0 ? 'change-up' : diff < 0 ? 'change-down' : 'change-flat';
-            const sign = diff >= 0 ? '+' : '';
-            const spread = (c.val * 0.003).toFixed(3);
-            return `<tr>
-                <td><b>${c.name}</b><br><span style="font-size:10px;color:var(--muted)">${c.code}</span></td>
-                <td class="mono">${fmt(c.val - parseFloat(spread)/2, 3)}</td>
-                <td class="mono">${fmt(c.val + parseFloat(spread)/2, 3)}</td>
-                <td><span class="mini-change ${cls}">${sign}${diff.toFixed(3)}</span></td>
-                <td><span class="mini-change ${cls}">${sign}${pct}%</span></td>
-            </tr>`;
-        }).join('');
-    }
-
-    // METALS
-    const goldBase = S.gold21;
-    setText('m-gold24', fmt(goldBase * 1.1429, 2));
-    setText('m-gold21', fmt(goldBase, 2));
-    setText('m-gold18', fmt(goldBase * 0.8571, 2));
-    setText('m-gold14', fmt(goldBase * 0.6667, 2));
-
-    const metalsTbody = document.getElementById('metals-tbody');
-    if (metalsTbody) {
-        const metals = [
-            { name: '🥇 الذهب عيار 21', egp: S.gold21, world: (S.gold21 / S.usd / 31.1035), prev: S.prev.gold21, unit: 'جرام' },
-            { name: '🥈 الفضة الإيطالي', egp: S.silver, world: (S.silver / S.usd / 31.1035), prev: S.prev.silver, unit: 'جرام' },
-            { name: '⚗️ البلاتين', egp: S.platinum, world: (S.platinum / S.usd / 31.1035), prev: S.prev.platinum, unit: 'جرام' },
-            { name: '🔬 البلاديوم', egp: S.palladium, world: (S.palladium / S.usd / 31.1035), prev: S.prev.palladium, unit: 'جرام' },
-        ];
-        metalsTbody.innerHTML = metals.map(m => {
-            const diff = m.egp - m.prev;
-            const cls = diff > 0 ? 'change-up' : diff < 0 ? 'change-down' : 'change-flat';
-            return `<tr>
-                <td><b>${m.name}</b></td>
-                <td class="mono">${fmt(m.egp, 2)} ج.م</td>
-                <td class="mono">${fmt(m.world, 2)} USD</td>
-                <td><span class="mini-change ${cls}">${diff >= 0 ? '+' : ''}${diff.toFixed(2)}</span></td>
-            </tr>`;
-        }).join('');
-    }
-
-    // CRYPTO
-    const cryptoTbody = document.getElementById('crypto-tbody');
-    if (cryptoTbody) {
-        const cryptos = [
-            { name: '₿ بيتكوين', code: 'BTC', usd: S.btc, prev: S.prev.btc },
-            { name: '⟠ إيثريوم', code: 'ETH', usd: S.eth, prev: S.prev.eth },
-            { name: '🔶 بينانس كوين', code: 'BNB', usd: S.bnb, prev: S.prev.bnb },
-            { name: '◎ سولانا', code: 'SOL', usd: S.sol, prev: S.prev.sol },
-            { name: '✕ ريبل', code: 'XRP', usd: S.xrp, prev: S.prev.xrp },
-            { name: '💲 تيثر', code: 'USDT', usd: 1.00, prev: 1.00 },
-        ];
-        cryptoTbody.innerHTML = cryptos.map(c => {
-            const diff = c.usd - c.prev;
-            const pct = ((diff / c.prev) * 100).toFixed(2);
-            const cls = diff > 0 ? 'change-up' : diff < 0 ? 'change-down' : 'change-flat';
-            const digits = c.usd > 100 ? 2 : c.usd > 1 ? 3 : 4;
-            const egp = c.usd * S.usd;
-            return `<tr>
-                <td><b>${c.name}</b><br><span style="font-size:10px;color:var(--muted)">${c.code}</span></td>
-                <td class="mono">$${fmt(c.usd, digits)}</td>
-                <td class="mono">${fmt(egp, 2)} ج.م</td>
-                <td><span class="mini-change ${cls}">${diff >= 0 ? '+' : ''}${pct}%</span></td>
-            </tr>`;
-        }).join('');
-    }
-
-    // Last update time
-    const now = new Date().toLocaleTimeString('ar-EG');
-    setText('last-update-sidebar', `آخر تحديث: ${now}`);
-}
-
-// ============================================================
-//  HELPERS
-// ============================================================
+// ================================================================
+//  RENDER
+// ================================================================
 function fmt(n, d) {
+    if (n === null || n === undefined || isNaN(n)) return '—';
     return n.toLocaleString('ar-EG', { minimumFractionDigits: d, maximumFractionDigits: d });
 }
 function setText(id, val) {
@@ -1405,123 +1260,235 @@ function setText(id, val) {
 function setPrice(id, current, changeId, prev, digits) {
     const el = document.getElementById(id);
     const chEl = document.getElementById(changeId);
-    if (!el) return;
-
-    const diff = current - prev;
-    const sign = diff >= 0 ? '+' : '';
-    const pct = prev ? ((diff / prev) * 100).toFixed(2) : 0;
-
+    if (!el || current === null || current === undefined) return;
     el.textContent = fmt(current, digits);
+    if (prev === null || prev === undefined) return;
+    const diff = current - prev;
+    if (Math.abs(diff) < 0.0001) return;
+    const sign = diff >= 0 ? '+' : '';
+    const pct = prev ? ((diff / prev) * 100).toFixed(2) : '0.00';
+    if (diff > 0) { el.classList.add('flash-up'); setTimeout(() => el.classList.remove('flash-up'), 600); }
+    else          { el.classList.add('flash-down'); setTimeout(() => el.classList.remove('flash-down'), 600); }
+    if (chEl) {
+        chEl.textContent = `${sign}${diff.toFixed(digits)} (${sign}${pct}%)`;
+        chEl.className = `mini-change ${diff > 0 ? 'change-up' : 'change-down'}`;
+    }
+}
+function set24hChange(el, pct) {
+    if (!el) return;
+    const sign = pct >= 0 ? '+' : '';
+    el.textContent = `${sign}${pct.toFixed(2)}%`;
+    el.className = `mini-change ${pct > 0 ? 'change-up' : pct < 0 ? 'change-down' : 'change-flat'}`;
+}
 
-    // Flash effect
-    if (diff > 0) {
-        el.classList.add('flash-up'); setTimeout(() => el.classList.remove('flash-up'), 600);
-    } else if (diff < 0) {
-        el.classList.add('flash-down'); setTimeout(() => el.classList.remove('flash-down'), 600);
+function renderAll() {
+    const gold = S.gold21 !== null ? S.gold21 * S.goldMult : null;
+    const prevGold = S.prev.gold21 !== null ? (S.prev.gold21 || S.gold21) * S.goldMult : null;
+
+    setPrice('home-gold',   gold,     'home-gold-change',   prevGold,      2);
+    setPrice('home-usd',    S.usd,    'home-usd-change',    S.prev.usd,    2);
+    setPrice('home-eur',    S.eur,    'home-eur-change',    S.prev.eur,    2);
+    setPrice('home-btc',    S.btc,    'home-btc-change',    S.prev.btc,    0);
+    // FIX: الفضة — تمرير S.prev.silver الصح
+    setPrice('home-silver', S.silver, 'home-silver-change', S.prev.silver, 2);
+
+    // BTC 24h override
+    if (S.btc_24h !== 0) set24hChange(document.getElementById('home-btc-change'), S.btc_24h);
+
+    // EGX
+    setText('home-egx30', fmt(S.egx30, 2));
+    setText('home-egx70', fmt(S.egx70, 2));
+    setText('home-egx100', fmt(S.egx100, 2));
+    document.querySelectorAll('#home-egx30-change,#home-egx70-change,#home-egx100-change').forEach(el => {
+        el.textContent = 'API غير متاح مجاناً'; el.className = 'mini-change change-flat';
+    });
+
+    // Ticker
+    const setTk = (id1, id2, val, d) => {
+        const v = val !== null && val !== undefined ? fmt(val, d) : '—';
+        [id1, id2].forEach(id => { const el = document.getElementById(id); if (el) el.textContent = v; });
+    };
+    setTk('tk-usd','tk-usd2', S.usd, 2);
+    setTk('tk-eur','tk-eur2', S.eur, 2);
+    setTk('tk-sar','tk-sar2', S.sar, 2);
+    setTk('tk-aed','tk-aed2', S.aed, 2);
+    setTk('tk-gold','tk-gold2', S.gold21, 2);
+    // FIX: الفضة في الـ ticker
+    setTk('tk-silver','tk-silver2', S.silver, 2);
+    setTk('tk-btc','tk-btc2', S.btc, 0);
+    setTk('tk-eth','tk-eth2', S.eth, 0);
+
+    // جدول العملات
+    const tbody = document.getElementById('currencies-tbody');
+    if (tbody && S.usd) {
+        const currencies = [
+            { name: '🇺🇸 دولار أمريكي', code: 'USD', val: S.usd,  prev: S.prev.usd },
+            { name: '🇪🇺 يورو',          code: 'EUR', val: S.eur,  prev: S.prev.eur },
+            { name: '🇬🇧 جنيه إسترليني', code: 'GBP', val: S.gbp,  prev: S.prev.gbp },
+            { name: '🇸🇦 ريال سعودي',    code: 'SAR', val: S.sar,  prev: S.prev.sar },
+            { name: '🇦🇪 درهم إماراتي',  code: 'AED', val: S.aed,  prev: S.prev.aed },
+            { name: '🇰🇼 دينار كويتي',   code: 'KWD', val: S.kwd,  prev: S.prev.kwd },
+            { name: '🇶🇦 ريال قطري',     code: 'QAR', val: S.qar,  prev: S.prev.qar },
+            { name: '🇧🇭 دينار بحريني',  code: 'BHD', val: S.bhd,  prev: S.prev.bhd },
+            { name: '🇯🇴 دينار أردني',   code: 'JOD', val: S.jod,  prev: S.prev.jod },
+            { name: '🇨🇦 دولار كندي',    code: 'CAD', val: S.cad,  prev: S.prev.cad },
+            { name: '🇨🇭 فرنك سويسري',   code: 'CHF', val: S.chf,  prev: S.prev.chf },
+            { name: '🇯🇵 ين ياباني ×100',code: 'JPY', val: S.jpy ? S.jpy * 100 : null, prev: S.prev.jpy ? S.prev.jpy * 100 : null },
+        ].filter(c => c.val !== null && c.val !== undefined);
+
+        tbody.innerHTML = currencies.map(c => {
+            const prev = c.prev || c.val;
+            const diff = c.val - prev;
+            const pct = prev ? ((diff / prev) * 100).toFixed(3) : '0.000';
+            const cls = diff > 0.001 ? 'change-up' : diff < -0.001 ? 'change-down' : 'change-flat';
+            const sign = diff >= 0 ? '+' : '';
+            const spread = c.val * 0.003;
+            return `<tr>
+                <td><b>${c.name}</b><br><span style="font-size:10px;color:var(--muted)">${c.code}</span></td>
+                <td class="mono">${fmt(c.val - spread/2, 3)}</td>
+                <td class="mono">${fmt(c.val + spread/2, 3)}</td>
+                <td><span class="mini-change ${cls}">${sign}${diff.toFixed(3)}</span></td>
+                <td><span class="mini-change ${cls}">${sign}${pct}%</span></td>
+            </tr>`;
+        }).join('');
     }
 
-    if (chEl) {
-        const cls = diff > 0 ? 'change-up' : diff < 0 ? 'change-down' : 'change-flat';
-        chEl.textContent = `${sign}${diff.toFixed(digits)} (${sign}${pct}%)`;
-        chEl.className = `mini-change ${cls}`;
+    // جدول المعادن
+    if (S.gold21) {
+        setText('m-gold24', fmt(S.gold24, 2));
+        setText('m-gold21', fmt(S.gold21, 2));
+        setText('m-gold18', fmt(S.gold18, 2));
+        setText('m-gold14', fmt(S.gold14, 2));
+
+        const metalsTbody = document.getElementById('metals-tbody');
+        if (metalsTbody) {
+            const metals = [
+                { name: '🥇 الذهب عيار 21', egp: S.gold21,    world_oz: S.gold24_usd_oz,    prev: S.prev.gold21 },
+                { name: '🥈 الفضة النقية',  egp: S.silver,    world_oz: S.silver_usd_oz,    prev: S.prev.silver },
+                { name: '⚗️ البلاتين',       egp: S.platinum,  world_oz: S.platinum_usd_oz,  prev: S.prev.platinum },
+                { name: '🔬 البلاديوم',      egp: S.palladium, world_oz: S.palladium_usd_oz, prev: S.prev.palladium },
+            ].filter(m => m.egp);
+
+            metalsTbody.innerHTML = metals.map(m => {
+                const prev = m.prev || m.egp;
+                const diff = m.egp - prev;
+                const cls = diff > 0.01 ? 'change-up' : diff < -0.01 ? 'change-down' : 'change-flat';
+                return `<tr>
+                    <td><b>${m.name}</b></td>
+                    <td class="mono">${fmt(m.egp, 2)} ج.م</td>
+                    <td class="mono">${m.world_oz ? '$' + fmt(m.world_oz, 2) : '—'}</td>
+                    <td><span class="mini-change ${cls}">${diff >= 0 ? '+' : ''}${diff.toFixed(2)}</span></td>
+                </tr>`;
+            }).join('');
+        }
+    }
+
+    // جدول الكريبتو
+    if (S.btc) {
+        const cryptoTbody = document.getElementById('crypto-tbody');
+        if (cryptoTbody) {
+            const cryptos = [
+                { name: '₿ بيتكوين',      code: 'BTC',  usd: S.btc, change24: S.btc_24h },
+                { name: '⟠ إيثريوم',       code: 'ETH',  usd: S.eth, change24: S.eth_24h },
+                { name: '🔶 بينانس كوين',  code: 'BNB',  usd: S.bnb, change24: S.bnb_24h },
+                { name: '◎ سولانا',        code: 'SOL',  usd: S.sol, change24: S.sol_24h },
+                { name: '✕ ريبل',          code: 'XRP',  usd: S.xrp, change24: S.xrp_24h },
+                { name: '💲 تيثر',         code: 'USDT', usd: 1,     change24: 0 },
+            ].filter(c => c.usd);
+
+            cryptoTbody.innerHTML = cryptos.map(c => {
+                const pct = c.change24 || 0;
+                const cls = pct > 0 ? 'change-up' : pct < 0 ? 'change-down' : 'change-flat';
+                const sign = pct >= 0 ? '+' : '';
+                const digits = c.usd > 100 ? 2 : c.usd > 1 ? 3 : 4;
+                const egp = c.usd * (S.usd || 52.6);
+                return `<tr>
+                    <td><b>${c.name}</b><br><span style="font-size:10px;color:var(--muted)">${c.code}</span></td>
+                    <td class="mono">$${fmt(c.usd, digits)}</td>
+                    <td class="mono">${fmt(egp, 2)} ج.م</td>
+                    <td><span class="mini-change ${cls}">${sign}${pct.toFixed(2)}%</span></td>
+                </tr>`;
+            }).join('');
+        }
     }
 }
 
-// ============================================================
+// ================================================================
 //  NAVIGATION
-// ============================================================
+// ================================================================
 function goTo(page, btn) {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
     document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
     document.getElementById('page-' + page).classList.add('active');
-    // Activate matching buttons (sidebar + bottom nav)
     document.querySelectorAll(`[data-page="${page}"]`).forEach(b => b.classList.add('active'));
 }
 
-// ============================================================
+// ================================================================
 //  GOLD GRADE
-// ============================================================
-function setGrade(grade, mult) {
+// ================================================================
+function setGrade(grade, mult, btn) {
     S.goldMult = mult;
     S.goldGrade = grade;
     setText('gold-grade-label', grade);
     document.querySelectorAll('.grade-btn').forEach(b => b.classList.remove('active'));
-    event.target.classList.add('active');
+    if (btn) btn.classList.add('active');
     renderAll();
 }
 
-// ============================================================
+// ================================================================
 //  THEME
-// ============================================================
+// ================================================================
 function toggleTheme() {
     const isLight = document.documentElement.classList.toggle('light');
     localStorage.setItem('theme', isLight ? 'light' : 'dark');
-    const desc = document.getElementById('theme-desc');
-    if (desc) desc.textContent = isLight ? 'الوضع النهاري مفعّل' : 'الوضع الليلي مفعّل';
+    document.getElementById('theme-desc').textContent = isLight ? 'الوضع النهاري مفعّل' : 'الوضع الليلي مفعّل';
 }
-if (localStorage.getItem('theme') === 'light') {
-    document.documentElement.classList.add('light');
-}
+if (localStorage.getItem('theme') === 'light') document.documentElement.classList.add('light');
 
-// ============================================================
-//  SPEED CONTROL
-// ============================================================
-let refreshSecs = parseInt(localStorage.getItem('speed') || '3');
+// ================================================================
+//  AUTO-REFRESH
+// ================================================================
+let refreshSecs = parseInt(localStorage.getItem('speed') || '60');
 let progress = 0;
-
 const speedRange = document.getElementById('speed-range');
 speedRange.value = refreshSecs;
 setText('speed-val', refreshSecs);
 setText('speed-display', refreshSecs);
-
-speedRange.oninput = function () {
+speedRange.oninput = function() {
     refreshSecs = parseInt(this.value);
     localStorage.setItem('speed', refreshSecs);
     setText('speed-val', refreshSecs);
     setText('speed-display', refreshSecs);
     progress = 0;
 };
-
-// ============================================================
-//  PROGRESS BAR + TIMER
-// ============================================================
 const syncBar = document.getElementById('sync-bar');
 setInterval(() => {
     progress += 100 / (refreshSecs * 10);
-    if (progress >= 100) {
-        progress = 0;
-        engine();
-    }
+    if (progress >= 100) { progress = 0; fetchAll(); }
     syncBar.style.width = Math.min(progress, 100) + '%';
 }, 100);
 
-
-// ============================================================
-//  MORE DRAWER (mobile)
-// ============================================================
+// ================================================================
+//  MORE DRAWER
+// ================================================================
 function toggleMoreDrawer() {
     const drawer = document.getElementById('more-drawer');
     const overlay = document.getElementById('more-overlay');
     const isOpen = drawer.style.display === 'block';
-    if (isOpen) { closeMoreDrawer(); }
-    else {
-        drawer.style.display = 'block';
-        overlay.style.display = 'block';
-        requestAnimationFrame(() => { drawer.style.transform = 'translateY(0)'; });
-        document.getElementById('more-btn').classList.add('active');
-    }
+    if (isOpen) { closeMoreDrawer(); return; }
+    drawer.style.display = 'block';
+    overlay.style.display = 'block';
+    requestAnimationFrame(() => { drawer.style.transform = 'translateY(0)'; });
+    document.getElementById('more-btn').classList.add('active');
 }
 function closeMoreDrawer() {
-    const drawer = document.getElementById('more-drawer');
-    const overlay = document.getElementById('more-overlay');
-    drawer.style.transform = 'translateY(100%)';
-    overlay.style.display = 'none';
+    document.getElementById('more-drawer').style.transform = 'translateY(100%)';
+    document.getElementById('more-overlay').style.display = 'none';
     document.getElementById('more-btn').classList.remove('active');
-    setTimeout(() => { drawer.style.display = 'none'; }, 300);
+    setTimeout(() => { document.getElementById('more-drawer').style.display = 'none'; }, 300);
 }
 function goToFromDrawer(page) {
     closeMoreDrawer();
-    // small delay so drawer closes nicely first
     setTimeout(() => {
         document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
         document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
@@ -1529,9 +1496,9 @@ function goToFromDrawer(page) {
     }, 150);
 }
 
-// ============================================================
-//  ALERTS SYSTEM — نظام التنبيهات
-// ============================================================
+// ================================================================
+//  ALERTS
+// ================================================================
 const ASSET_META = {
     usd:    { name: 'دولار أمريكي', emoji: '💵', unit: 'ج.م', digits: 2 },
     eur:    { name: 'يورو',          emoji: '💶', unit: 'ج.م', digits: 2 },
@@ -1544,168 +1511,109 @@ const ASSET_META = {
     btc:    { name: 'بيتكوين',       emoji: '₿',  unit: 'USD', digits: 0 },
     eth:    { name: 'إيثريوم',       emoji: '⟠',  unit: 'USD', digits: 2 },
     sol:    { name: 'سولانا',        emoji: '◎',  unit: 'USD', digits: 2 },
-    egx30:  { name: 'EGX 30',        emoji: '📈', unit: 'نقطة', digits: 2 },
 };
-
 let alerts = JSON.parse(localStorage.getItem('price_alerts') || '[]');
 let alertLog = JSON.parse(localStorage.getItem('alert_log') || '[]');
-
 function saveAlerts() {
     localStorage.setItem('price_alerts', JSON.stringify(alerts));
     localStorage.setItem('alert_log', JSON.stringify(alertLog));
 }
-
 function addAlert() {
     const asset = document.getElementById('alert-asset').value;
     const dir   = document.getElementById('alert-dir').value;
     const price = parseFloat(document.getElementById('alert-price').value);
     const note  = document.getElementById('alert-note').value.trim();
-
-    if (!price || isNaN(price) || price <= 0) {
-        shakeInput('alert-price');
-        return;
-    }
-
+    if (!price || isNaN(price) || price <= 0) { shakeInput('alert-price'); return; }
     const meta = ASSET_META[asset];
     const currentVal = S[asset];
-
-    // Sanity check: target must be on the correct side
-    if (dir === 'above' && price <= currentVal) {
-        showWarn(`السعر الحالي (${currentVal.toFixed(meta.digits)}) أعلى من الهدف بالفعل! اختر قيمة أعلى.`);
-        return;
+    if (currentVal !== null && currentVal !== undefined) {
+        if (dir === 'above' && price <= currentVal) { showWarn(`السعر الحالي (${currentVal.toFixed(meta.digits)}) أعلى بالفعل!`); return; }
+        if (dir === 'below' && price >= currentVal) { showWarn(`السعر الحالي (${currentVal.toFixed(meta.digits)}) أقل بالفعل!`); return; }
     }
-    if (dir === 'below' && price >= currentVal) {
-        showWarn(`السعر الحالي (${currentVal.toFixed(meta.digits)}) أقل من الهدف بالفعل! اختر قيمة أقل.`);
-        return;
-    }
-
-    const id = Date.now();
-    alerts.push({ id, asset, dir, price, note, fired: false, createdAt: new Date().toLocaleTimeString('ar-EG') });
+    alerts.push({ id: Date.now(), asset, dir, price, note, fired: false, createdAt: new Date().toLocaleTimeString('ar-EG') });
     saveAlerts();
-
     document.getElementById('alert-price').value = '';
     document.getElementById('alert-note').value = '';
-
     renderAlerts();
-    showToastSuccess(`تم إضافة التنبيه ✅`, `${meta.emoji} ${meta.name} ${dir === 'above' ? 'فوق' : 'تحت'} ${price} ${meta.unit}`);
+    showToastSuccess('تم إضافة التنبيه ✅', `${meta.emoji} ${meta.name} ${dir === 'above' ? 'فوق' : 'تحت'} ${price} ${meta.unit}`);
 }
-
 function deleteAlert(id) {
     alerts = alerts.filter(a => a.id !== id);
     saveAlerts();
     renderAlerts();
 }
-
 function renderAlerts() {
     const list = document.getElementById('alerts-list');
-    const empty = document.getElementById('alerts-empty');
     const badge = document.getElementById('alerts-badge');
-    const active = alerts.filter(a => !a.fired);
-    const fired  = alerts.filter(a => a.fired);
-
-    // Update badge (sidebar + mobile)
     const badgeMob = document.getElementById('alerts-badge-mob');
-    if (active.length > 0) {
-        badge.style.display = 'inline';
-        badge.textContent = active.length;
-        if (badgeMob) { badgeMob.style.display = 'inline'; badgeMob.textContent = active.length; }
-    } else {
-        badge.style.display = 'none';
-        if (badgeMob) badgeMob.style.display = 'none';
-    }
-
+    const active = alerts.filter(a => !a.fired).length;
+    badge.style.display = active > 0 ? 'inline' : 'none';
+    badge.textContent = active;
+    if (badgeMob) { badgeMob.style.display = active > 0 ? 'inline' : 'none'; badgeMob.textContent = active; }
     if (alerts.length === 0) {
         list.innerHTML = '';
-        list.appendChild(empty);
+        list.appendChild(document.getElementById('alerts-empty'));
         return;
     }
-
     list.innerHTML = alerts.map(a => {
-        const meta = ASSET_META[a.asset];
-        const iconClass = a.dir === 'above' ? 'alert-icon-up' : 'alert-icon-down';
-        const dirEmoji  = a.dir === 'above' ? '⬆️' : '⬇️';
-        const dirText   = a.dir === 'above' ? 'يصعد فوق' : 'ينزل تحت';
+        const meta = ASSET_META[a.asset] || {};
+        const dirEmoji = a.dir === 'above' ? '⬆️' : '⬇️';
+        const dirText  = a.dir === 'above' ? 'يصعد فوق' : 'ينزل تحت';
         const firedBadge = a.fired
             ? `<span style="font-size:10px;background:rgba(34,197,94,0.15);color:var(--green);padding:2px 8px;border-radius:8px;font-weight:700">✅ تم</span>`
             : `<span style="font-size:10px;background:rgba(59,130,246,0.1);color:var(--blue);padding:2px 8px;border-radius:8px;font-weight:700">⏳ نشط</span>`;
-        return `
-        <div class="alert-card ${a.fired ? 'fired' : ''}" id="alert-card-${a.id}">
-            <div class="alert-icon-wrap ${iconClass}">${dirEmoji}</div>
+        return `<div class="alert-card ${a.fired ? 'fired' : ''}">
+            <div class="alert-icon-wrap ${a.dir === 'above' ? 'alert-icon-up' : 'alert-icon-down'}">${dirEmoji}</div>
             <div class="alert-body">
-                <div class="alert-title">${meta.emoji} ${meta.name} &nbsp; ${firedBadge}</div>
-                <div class="alert-subtitle">${dirText} ${a.price} ${meta.unit}${a.note ? ' · ' + a.note : ''}</div>
-                <div class="alert-subtitle" style="margin-top:2px;font-size:10px">أُضيف: ${a.createdAt}</div>
+                <div class="alert-title">${meta.emoji || '🔔'} ${meta.name || a.asset} &nbsp; ${firedBadge}</div>
+                <div class="alert-subtitle">${dirText} ${a.price} ${meta.unit || ''}${a.note ? ' · ' + a.note : ''}</div>
+                <div class="alert-subtitle" style="font-size:10px">أُضيف: ${a.createdAt}</div>
             </div>
             <div class="alert-target" style="color:${a.dir==='above'?'var(--green)':'var(--red)'}">${a.price}</div>
-            <button class="alert-delete-btn" onclick="deleteAlert(${a.id})" title="حذف">✕</button>
+            <button class="alert-delete-btn" onclick="deleteAlert(${a.id})">✕</button>
         </div>`;
     }).join('');
-
-    // Render log
     renderLog();
 }
-
 function renderLog() {
     const logEl = document.getElementById('alerts-log');
     const logEmpty = document.getElementById('log-empty');
-    if (alertLog.length === 0) {
-        logEl.innerHTML = '';
-        logEl.appendChild(logEmpty);
-        return;
-    }
+    if (alertLog.length === 0) { logEl.innerHTML = ''; logEl.appendChild(logEmpty); return; }
     logEl.innerHTML = [...alertLog].reverse().slice(0, 20).map(l => `
         <div class="log-card">
             <div style="font-size:20px">${ASSET_META[l.asset]?.emoji || '🔔'}</div>
-            <div style="flex:1">
-                <div style="font-size:13px;font-weight:900">${l.msg}</div>
-                <div class="log-time">${l.time}</div>
-            </div>
+            <div style="flex:1"><div style="font-size:13px;font-weight:900">${l.msg}</div><div class="log-time">${l.time}</div></div>
             <span style="font-size:10px;background:rgba(34,197,94,0.1);color:var(--green);padding:2px 8px;border-radius:8px;font-weight:700">✅ أُطلق</span>
         </div>`).join('');
 }
-
 function checkAlerts() {
     let fired = false;
     alerts.forEach(a => {
         if (a.fired) return;
         const current = S[a.asset];
-        const meta = ASSET_META[a.asset];
-        let triggered = false;
-        if (a.dir === 'above' && current >= a.price) triggered = true;
-        if (a.dir === 'below' && current <= a.price) triggered = true;
-
+        if (current === null || current === undefined) return;
+        const meta = ASSET_META[a.asset] || {};
+        const triggered = (a.dir === 'above' && current >= a.price) || (a.dir === 'below' && current <= a.price);
         if (triggered) {
-            a.fired = true;
-            fired = true;
-            const msg = `${meta.emoji} ${meta.name} وصل ${current.toFixed(meta.digits)} ${meta.unit}`;
-            const note = a.note ? ` (${a.note})` : '';
-            alertLog.push({ asset: a.asset, msg: msg + note, time: new Date().toLocaleTimeString('ar-EG'), price: current });
+            a.fired = true; fired = true;
+            const msg = `${meta.emoji || ''} ${meta.name || a.asset} وصل ${current.toFixed(meta.digits || 2)} ${meta.unit || ''}`;
+            alertLog.push({ asset: a.asset, msg: msg + (a.note ? ` (${a.note})` : ''), time: new Date().toLocaleTimeString('ar-EG') });
             saveAlerts();
             showToastFired(meta.emoji, meta.name, current, meta.unit, meta.digits, a.note);
-
-            // Try browser notification
-            if (Notification.permission === 'granted') {
-                new Notification('🔔 مؤشر مصر — تنبيه سعر!', {
-                    body: msg + note,
-                    icon: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><text y="26" font-size="28">📈</text></svg>'
-                });
-            }
+            if (Notification.permission === 'granted') new Notification('🔔 مؤشر مصر', { body: msg });
         }
     });
     if (fired) renderAlerts();
 }
 
-// ============================================================
-//  TOAST
-// ============================================================
+// ================================================================
+//  TOASTS
+// ================================================================
 function showToastFired(emoji, name, price, unit, digits, note) {
-    toast(`${emoji} تنبيه سعر!`,
-          `${name} وصل ${price.toFixed(digits)} ${unit}${note ? ' · ' + note : ''}`,
-          'var(--green)', '🔔');
+    toast(`${emoji} تنبيه سعر!`, `${name} وصل ${price?.toFixed(digits||2)} ${unit}${note ? ' · ' + note : ''}`, 'var(--green)', '🔔');
 }
 function showToastSuccess(title, body) { toast(title, body, 'var(--blue)', '✅'); }
 function showWarn(msg) { toast('⚠️ تحقق من القيمة', msg, 'var(--gold)', '⚠️'); }
-
 function toast(title, body, color, icon) {
     const container = document.getElementById('toast-container');
     const el = document.createElement('div');
@@ -1713,51 +1621,29 @@ function toast(title, body, color, icon) {
     el.style.borderColor = color;
     el.innerHTML = `
         <div class="toast-icon">${icon}</div>
-        <div style="flex:1">
-            <div class="toast-title">${title}</div>
-            <div class="toast-body">${body}</div>
-        </div>
+        <div style="flex:1"><div class="toast-title">${title}</div><div class="toast-body">${body}</div></div>
         <button class="toast-close" onclick="this.parentElement.remove()">✕</button>`;
-    el.querySelector('::before'); // trigger repaint
     container.appendChild(el);
-    setTimeout(() => {
-        el.style.animation = 'toastOut 0.3s ease forwards';
-        setTimeout(() => el.remove(), 300);
-    }, 5000);
+    setTimeout(() => { el.style.animation = 'toastOut 0.3s ease forwards'; setTimeout(() => el.remove(), 300); }, 5000);
 }
-
 function shakeInput(id) {
     const el = document.getElementById(id);
+    if (!el) return;
     el.style.borderColor = 'var(--red)';
-    el.style.animation = 'none';
-    el.offsetHeight;
+    el.style.animation = 'none'; el.offsetHeight;
     el.style.animation = 'shake 0.4s';
     setTimeout(() => { el.style.borderColor = ''; el.style.animation = ''; }, 600);
 }
 
-// Request notification permission
 if ('Notification' in window && Notification.permission === 'default') {
     setTimeout(() => Notification.requestPermission(), 2000);
 }
 
-// Hook alerts check into engine
-const _origEngine = engine;
-// Override: checkAlerts runs after every engine tick
-const _engineInterval = setInterval(() => {}, 999999); // placeholder
-// We inject checkAlerts at the end of the existing engine function
-const _realEngine = engine;
-window.engine = function() { _realEngine(); checkAlerts(); };
-
-// ============================================================
+// ================================================================
 //  INIT
-// ============================================================
-// Patch engine to also check alerts every tick
-const _baseEngine = engine;
-engine = function() { _baseEngine(); checkAlerts(); };
-
-renderAll();
+// ================================================================
 renderAlerts();
-
+fetchAll();
 </script>
 </body>
 </html>
